@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Itinerary</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #05758ed6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #05758ed6;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #010101;
+        }
+        nav {
+            margin-bottom: 20px;
+            background-color: #1b1818;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .accordion {
+            background-color: #f7f2f2;
+            border: 1px solid #0f0e0e;
+            border-radius: 4px;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            text-align: left;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #f1f1f1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .video {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .audio-player {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .weather {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-form {
+            margin: 20px 0;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Holiday Itinerary</h1>
+        <nav>
+            <a href="#day1">Day 1</a>
+            <a href="#day2">Day 2</a>
+            <a href="#day3">Day 3</a>
+            <a href="#schedule">Detailed Schedule</a>
+            <a href="#video">Destination Video</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+
+        <img src="1.jpg" alt="Tropical Paradise" style="width: 100%; border-radius: 8px;">
+
+        <!-- Google Map -->
+    
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12614.089441065362!2d-73.977746!3d40.750828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af5bfb2cb1%3A0x7e6b2b19dd19f3e8!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1609450928385!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Weather Forecast -->
+        <div class="weather">
+            <h2>Weather Forecast</h2>
+            <p><strong>Day 1:</strong> Sunny, 28°C</p>
+            <p><strong>Day 2:</strong> Partly Cloudy, 27°C</p>
+            <p><strong>Day 3:</strong> Light Showers, 25°C</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>For bookings and inquiries, please contact:</p>
+            <p><strong>Email:</strong> <a href="shreevarsha655@gmail.com">shreevarsha655@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+8328377008">+91 8328377008</a></p>
+        </div>
+        <img src="2.jpg" alt="Tropical Paradise" style="width: 100%; border-radius: 8px;">
+
+        <!-- Interactive Schedule -->
+        <h2 id="day1">Day 1: August 30, 2024</h2>
+        <div class="accordion">Activities</div>
+        <div class="accordion-content">
+            <ul>
+                <li>09:00 AM - Arrival at the airport</li>
+                <li>11:00 AM - Check-in at the resort</li>
+                <li>02:00 PM - Lunch at resort</li>
+                <li>03:00 PM - Bamboo village and cycling tour</li>
+                <li>09:00 PM - Dinner at resort</li>
+            </ul>
+        </div>
+
+        <h2 id="day2">Day 2: August 31, 2024</h2>
+        <div class="accordion">Activities</div>
+        <div class="accordion-content">
+            <ul>
+                <li>08:00 AM - Breakfast at the resort</li>
+                <li>09:30 AM - Morning beach excursion at Sandy Shores</li>
+                <li>12:00 PM - Lunch at Beachside Cafe</li>
+                <li>02:00 PM - City tour: Visit the City Museum and Central Park</li>
+            </ul>
+        </div>
+
+        <h2 id="day3">Day 3: September 1, 2024</h2>
+        <div class="accordion">Activities</div>
+        <div class="accordion-content">
+            <ul>
+                <li>07:30 AM - Breakfast at the resort</li>
+                <li>09:00 AM - Depart for the Allaeppy Houseboat Day Cruise Tour</li>
+                <li>10:30 PM - Stay in House boat</li>
+            </ul>
+        </div>
+        <h2 id="day4">Day 4: September 2, 2024</h2>
+        <div class="accordion">Activities</div>
+        <div class="accordion-content">
+            <ul>
+                <li>07:30 AM - Breakfast at the house boat</li>
+                <li>09:00 AM - Depart form the Allaeppy Houseboat Day Cruise Tour</li>
+                <li>10:30 AM - Chocolate Factory visit</li>
+                <li>2:00 PM -  Lunch in 5 star hotel</li>
+            </ul>
+        </div>
+        <img src="3.jpg" alt="Tropical Paradise" style="width: 100%; border-radius: 8px;">
+
+        <!-- Table for Detailed Schedule -->
+        <h2 id="schedule">Detailed Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Arrival at the airport</td>
+                    <td>Airport</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Check-in at the resort</td>
+                    <td>resort</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM</td>
+                    <td>Bamboo village and cycling tour</td>
+                    <td>Wayanad</td>
+                </tr>
+                <tr>
+                    <td>08:00 AM</td>
+                    <td>Breakfast at the resort</td>
+                    <td>resort</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Depart for the Allaeppy Houseboat Day Cruise Tour</td>
+                    <td>Allaeppy</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM</td>
+                    <td>Stay in House boat</td>
+                    <td>Island Nature Reserve</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>Lunch at house boat</td>
+                    <td>House boat</td>
+                </tr>
+                <tr>
+                    <td>07:00 PM</td>
+                    <td>Chocolate Factory visit</td>
+                    <td>Industry</td>
+                </tr>
+                <tr>
+                    <td>09:00 PM</td>
+                    <td>Lunch in 5 star hotel</td>
+                    <td>Hotel Lounge</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Embedded Video -->
+        <h2 id="video">Destination Overview</h2>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/feydhQI6HBM?si=URkVzKVn-e2daHmF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <h2 id="contact">Contact Us</h2>
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
